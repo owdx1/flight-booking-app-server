@@ -113,6 +113,13 @@ const flightSchema = new mongoose.Schema ({
   }],
   intercityPrice: Number,
   intercityMinutes: Number,
+  searchStarting: Number,
+  searchFinishing: Number,
+  searchFlightHour:Number,
+  searchFlightMinutes:Number,
+  firmName:String,
+  searchFromStartToSidMinutes:Number,
+  searchFromStartToSidHour:Number,
 })
 
 module.exports = mongoose.model('Flight', flightSchema);

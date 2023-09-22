@@ -73,7 +73,7 @@ router.post('/create-flight' , firmTokenValidator, firmTokenRefreshValidator , a
       totalIncome,
       totalPassangers
     });
-    await newFlight.save();
+    await newFlight.save();   
 
   
 
