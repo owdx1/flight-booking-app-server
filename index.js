@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 const firmRouter = require('./pages/firm/auth.js');
 const searchRouter = require('./pages/search.js');
 const flightRouter = require('./pages/flight.js');
+const paymentRouter = require('./pages/payment.js');
 const cors = require('cors');
 
 
@@ -37,6 +38,19 @@ app.post('/' , async (req, res) =>{
   } catch (error) {
     console.error(error)
   }
+})
+
+app.get('/' , async (req , res) => {
+  try {
+    console.log('geldi');
+
+    return res.status(200).json({message:'Bravo'})
+
+  } catch (error) {
+    console.error(error);
+    return res.status(500).json({message:'Server Error'})
+  }
+  
   
 })
 
@@ -44,7 +58,7 @@ app.post('/' , async (req, res) =>{
 
 app.use('/firm', firmRouter);
 app.use('/flight' , flightRouter);
-
+app.use('/payment', paymentRouter);
 app.use('/search' , searchRouter);
 
 app.listen(5000, () => {

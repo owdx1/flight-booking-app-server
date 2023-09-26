@@ -71,7 +71,10 @@ const flightSchema = new mongoose.Schema ({
       required:true
     },
     bookersInformation:[
+      
       {
+        isSubscribed: Boolean,
+
         customersName: {
           type:String
         },
@@ -92,9 +95,15 @@ const flightSchema = new mongoose.Schema ({
         },
         customersTotalPayment:{
           type: Number
-        }
+        },
+        customersGender: String,
+        customersFlightHour: String,
+        customersFlightDate:String,
+        customersCardNo:String,
+        customersmonthAndYear:String,
+        customersCVC:String
         
-      }
+      },  
     ]
   }],
   intercity:[{

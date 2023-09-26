@@ -19,37 +19,10 @@ router.post('/create-flight' , firmTokenValidator, firmTokenRefreshValidator , a
     
 
     const seats = Array.from({ length: 41 }, (_, index) => ({
-      selectedFirstCityId: direction[0],
-      selectedSecondCityId: direction[direction.length - 1],
+      selectedFirstCityId: -2,
+      selectedSecondCityId: -2,
       seatNumber: index + 1,
-      bookingCounter: index === 0  ? 1 : 0,
-      ...(index === 0 
-        ? {
-            bookersInformation: 
-              [
-                {
-                  customersName: 'Can',
-                  customersID: '21524470162',
-                  customersPhone: '507 548 47 03',
-                  customersEmail: 'cancam@gmail.com',
-                  customersStartingCityId: 26,
-                  customersEndingCityId:3,
-                  customersTotalPayment:200
-                },
-                {
-                  customersName: 'Cenyy',
-                  customersID: '21524320162',
-                  customersPhone: '507 548 47 03',
-                  customersEmail: 'casam@gmail.com',
-                  customersStartingCityId: 26,
-                  customersEndingCityId:3,
-                  customersTotalPayment:200
-                },
-
-
-            ],
-          }
-        : {}), 
+      bookingCounter: 0
     }));
     
     

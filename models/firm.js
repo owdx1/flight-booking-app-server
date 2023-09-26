@@ -16,7 +16,12 @@ const firmSchema = new mongoose.Schema({
   phoneNumber: {
     type: String,
     required:true
-  }
+  },
+  phoneNumber2: {
+    type:String,
+    required:true
+  },
+  firmPhotoUrl: String
 })
 
 module.exports = mongoose.model('Firm', firmSchema);
