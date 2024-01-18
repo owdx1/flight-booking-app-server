@@ -19,7 +19,7 @@ const firmSchema = new mongoose.Schema({
   },
   phoneNumber2: {
     type:String,
-    required:true
+
   },
   firmPhotoUrl: String
 })
